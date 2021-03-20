@@ -11,12 +11,7 @@ namespace MegaArtBot
         public static ITelegramBotClient botClient;
         static void Main()
         {
-            botClient = new TelegramBotClient("1732100535:AAHRWaLdV5QXOlOcqZ_sgJr-P5lxUcCGdxk");
-
-            var me = botClient.GetMeAsync().Result;
-            Console.WriteLine(
-              $"Hello, World! I am user {me.Id} and my name is {me.FirstName}."
-            );
+            botClient = new TelegramBotClient("XXX");
 
             botClient.OnMessage += Command.Bot_GenerateRandom;
             botClient.OnMessage += Command.Bot_GiveRandomCat;
