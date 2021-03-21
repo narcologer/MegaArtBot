@@ -9,15 +9,15 @@ namespace MegaArtBot
 {
     partial class Commands
     {
-        public static async void Bot_GiveRandomCat(object sender, MessageEventArgs e)
+        public static async void Bot_GiveRandomGirl(object sender, MessageEventArgs e)
         {
             var config = Configuration.Default.WithDefaultLoader();
             try
             {
-                if (e.Message.Text == "/showrndcat")
+                if (e.Message.Text == "/showrndgirl")
                 {
-                    var document = await BrowsingContext.New(config).OpenAsync(Program.cats);
-                    IEnumerable<string> imgcol = Functions.ImgParser(document, "http://kotomatrix.ru/images");
+                    var document = await BrowsingContext.New(config).OpenAsync(Program.girls);
+                    IEnumerable<string> imgcol = Functions.ImgParser(document, ".jpg");
                     await Program.botClient.SendTextMessageAsync(
                          chatId: e.Message.Chat,
                          text: "Random Image " + imgcol.ElementAt(Functions.GetRandom(imgcol.Count()))
