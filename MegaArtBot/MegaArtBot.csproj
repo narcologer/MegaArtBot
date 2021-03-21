@@ -64,9 +64,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Callbacks.cs" />
     <Compile Include="Commands\GenerateRandom.cs" />
     <Compile Include="Commands\GiveRandomCat.cs" />
     <Compile Include="Commands\GiveRandomGirl.cs" />
+    <Compile Include="Commands\SetGirlPage.cs" />
+    <Compile Include="Commands\SetCatPage.cs" />
     <Compile Include="Functions\GetRandom.cs" />
     <Compile Include="Functions\ImgParser.cs" />
     <Compile Include="Program.cs" />
