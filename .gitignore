@@ -1,5 +1,5 @@
 .vs
-MegaArtBot.sln
 MegaArtBot/bin
 MegaArtBot/obj
+MegaArtBot/Commands/GiveRandomGirl.cs
 packages
