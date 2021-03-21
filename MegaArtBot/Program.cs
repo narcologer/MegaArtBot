@@ -3,6 +3,7 @@ using Telegram.Bot;
 using Telegram.Bot.Args;
 using AngleSharp;
 using System.Linq;
+using System.IO;
 
 namespace MegaArtBot
 {
@@ -11,10 +12,14 @@ namespace MegaArtBot
         public static ITelegramBotClient botClient;
         static void Main()
         {
-            botClient = new TelegramBotClient("XXX");
+            botClient = new TelegramBotClient(new StreamReader("APIKEY.txt").ReadLine());
 
-            botClient.OnMessage += Command.Bot_GenerateRandom;
-            botClient.OnMessage += Command.Bot_GiveRandomCat;
+            var me = botClient.GetMeAsync().Result;
+            Console.WriteLine($"Hello, World! I am user {me.Id} and my name is {me.FirstName}.");
+
+            botClient.OnMessage += Commands.Bot_GenerateRandom;
+            botClient.OnMessage += Commands.Bot_GiveRandomCat;
+            botClient.OnMessage += Commands.Bot_GiveRandomGirl;
             botClient.StartReceiving();
 
             Console.WriteLine("Press any key to exit");
