@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace MegaArtBot
 {
-    partial class Functions
+    public partial class Functions
     {
         public static IEnumerable<string> ImgParser(AngleSharp.Dom.IDocument document, String Addition)
         {
