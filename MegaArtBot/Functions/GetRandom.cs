@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace MegaArtBot
 {
-    partial class Functions
+    public partial class Functions
     {
         static Random rnd = new Random();
         public static int GetRandom(int m)

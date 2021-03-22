@@ -1,4 +1,6 @@
 .vs
 MegaArtBot/bin
 MegaArtBot/obj
+MegaArtBotTests/bin
+MegaArtBotTests/obj
 packages
